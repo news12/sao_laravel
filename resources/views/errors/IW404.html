@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+  <TITLE>{%APPNAME%}Error</TITLE>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+  <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="cache-control" content="no-cache">
+ <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+
+
+        <link rel="stylesheet" href="../vendor/lobibox/font-awesome/css/font-awesome.min.css"/>
+        
+</HEAD>
+<BODY>
+  <div class="container">
+  <br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="float: center">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <h3 class="text-center">
+          <span class="glyphicon" aria-hidden="true"></span><img src="../img/Chibi_erro.png"> Oops:
+          <small>Erro de aplicação - <b>erro - {%APPNAME%}</b></small>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <p>Ocorreu o seguinte erro:</p>
+
+            <ul class="list-group">
+              <li class="list-group-item">{%EXCEPTIONSPECIFIC%}</li>
+              <li class="list-group-item">Se você chegou a esta página clicando em um link,
+                <a href="http://newsgames.com.br"><b>contate-nos</b></a> raiz do erro <b>
+                <FONT COLOR="RED">
+                {%CONTENT%}
+                </FONT>
+                </b></li>
+                <li class="list-group-item">Clique aqui para reiniciar <a href="{%APPADDRESS%}$/start">sua <b>{%APPNAME%}</b></a> :)</li>
+              </ul>
+          </div>
+        </div>
+         <p><a href="https://newsgames.com.br"target="_blank">NewsGames.</a></p>
+      </div>
+      <div class="col-md-2">
+       
+      </div>
+    </div>
+   
+        
+</div>
+  
+</BODY>
+</HTML>

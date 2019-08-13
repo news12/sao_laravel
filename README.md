@@ -1,8 +1,12 @@
 # sao_laravel
 Sword Art Online Browser Game PHP/Laravel
+
 Faça um clone do repositório em seu pc
+
 utilize uma IDE a seu gosto, neste projeto foi utilizado o PHPStorm
+
 Necessário conhecimento no framework Laravel.
+
 Instale o Mysql 7.2 ou superior
 configure um usuario e senha
 

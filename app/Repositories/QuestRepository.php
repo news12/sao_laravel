@@ -11,7 +11,7 @@ namespace App\Repositories;
  */
 interface QuestRepository
 {
-    public function all($columns = ['*']);
+    public function all($columns = ['*'],$where = [null]);
 
     public function update($field = ['*']);
 
@@ -24,4 +24,5 @@ interface QuestRepository
     public function selectID($field, $where = [null]);
 
     public function count();
+
 }

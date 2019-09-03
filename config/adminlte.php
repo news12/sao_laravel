@@ -300,7 +300,7 @@ return [
             'icon' => 'suitcase',
         ],
         [
-            'text' => 'Habilitade',
+            'text' => 'Habilidade',
             'url' => 'skill',
             'icon' => 'book',
         ],

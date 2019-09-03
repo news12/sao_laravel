@@ -75,10 +75,7 @@ class AndarsController extends Controller
                 'andar' => $this->persoangem_andar
             ]);
 
-        $quest_andar = $this->questRepository->selectID('*',
-            [
-                ''
-            ]);
+
 
         $mapa = $this->mapaRepository->selectID('*',
             [
@@ -86,11 +83,12 @@ class AndarsController extends Controller
                 /* 'id' => $this->personagem_mapa*/
             ]);
 
-
+            $quests = $this->questRepository->all('*',['id_andar'=>$this->persoangem_andar]);
         return view('andar.andar')
             ->with('andar_atual', $this->persoangem_andar)
             ->with('mapa', $mapa)
-            ->with('andars', $andar);
+            ->with('andars', $andar)
+            ->with('quests',$quests);
     }
 
     /**

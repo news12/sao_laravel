@@ -31,6 +31,7 @@ $(function () {
     //inicio carregar popover
     $('.popover-avatar').webuiPopover();
     $('.popover-itens-bag').webuiPopover({style: 'inverse'});
+    $('.popover-rec-quest').webuiPopover({style: 'inverse'});
 
     //fim carregar popover
 
@@ -434,7 +435,15 @@ $(document).ready(function () {
         size  : '3px'
     })
 
-
+    var url = window.location.href;
+    // for sidebar menu entirely but not cover treeview
+    $('ul.sidebar-menu a').filter(function() {
+        return this.href == url;
+    }).parent().addClass('active');
+    // for treeview
+    $('ul.treeview-menu a').filter(function() {
+        return this.href == url;
+    }).closest('.treeview').addClass('active');
 
 });
 

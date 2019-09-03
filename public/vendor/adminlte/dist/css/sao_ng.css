@@ -2643,7 +2643,15 @@ div#loader {
 }
 
 .sidebar {
-    overflow: auto;
+    overflow: visible;
+    height: 100vh;
+}
+
+.main-sidebar > .sidebar > nav {
+    margin-right: -23px;
+    padding-right: 22px;
+    overflow-y: auto;
+    height: calc(100% - 6rem);
 }
 
 .andar {
@@ -2697,4 +2705,146 @@ div#loader {
 .andar .list-mapa .mapa-select p {
     margin-left: 5px;
     color: #d2d6de;
+}
+
+.mapstatus{
+    width: 100%;
+    min-width: 800px;
+    height: auto;
+    /*border: 1px silver solid;*/
+}
+.mapstatus .topmap{
+    background: url("../../../../img/top_map.png") no-repeat;
+    width: 100%;
+    height: 45px;
+}
+.mapstatus .topmap p{
+   padding-top: 10px;
+}
+
+.mapstatus .corpo-quest{
+    width:100%;
+    height:300px;
+    overflow: auto;
+
+}
+
+.quest{
+    background: url("../../../../img/fundo_quest_map.png");
+    width: 100%;
+    height: 300px;
+}
+/*Tratar largura de telas*/
+@media (max-width: 1600px) {
+    .mapstatus{
+        min-width: 1024px;
+    }
+    .quest {
+        background: url("../../../../img/fundo_quest_map_1024.png");
+        width: 100%;
+        height: 300px;
+    }
+}
+/*Largura Celular virado*/
+@media (max-width: 599px) {
+    .mapstatus{
+        min-width: 480px;
+    }
+    .mapstatus .topmap{
+        max-width: 480px;
+    }
+    .mapstatus .corpo-quest{
+        width:480px;
+
+    }
+    .quest {
+        background: url("../../../../img/fundo_quest_map_480.png") no-repeat;
+        width: 100%;
+        height: 300px;
+    }
+    .quest .descricao{
+        max-width: 400px;
+
+
+    }
+
+}
+
+@media (max-width: 450px) {
+    .mapstatus{
+        min-width: 200px;
+    }
+    .mapstatus .topmap{
+        max-width: 200px;
+    }
+    .mapstatus .corpo-quest{
+        width:200px;
+
+    }
+
+    .quest {
+        background: url("../../../../img/fundo_quest_map_480.png") no-repeat;
+        width: 100%;
+        max-width: 320px;
+        height: 300px;
+    }
+    .quest .descricao{
+        max-width: 180px;
+
+
+    }
+
+}
+
+@media (max-width: 799px) {
+    .mapstatus{
+        min-width: 600px;
+    }
+    .mapstatus .topmap{
+        max-width: 600px;
+    }
+    .mapstatus .corpo-quest{
+        width:600px;
+
+    }
+    .quest {
+        background: url("../../../../img/fundo_quest_map_600.png") no-repeat;
+        width: 100%;
+        height: 300px;
+    }
+    .quest .descricao{
+        max-width: 500px;
+
+    }
+
+}
+
+.quest .titulo{
+    padding-left: 230px;
+    padding-top: 20px;
+}
+
+.quest .descricao{
+    max-width: 700px;
+    height: 150px;
+   /* overflow: auto;*/
+}
+
+.quest .recompensa{
+    height: 50px;
+    width: 100px;
+    max-width: 100px;
+    padding-top: -150px;
+    display: flex;
+    position: relative;
+}
+.quest .recompensa .imgxp{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+.quest .recompensa .imgcol{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
 }

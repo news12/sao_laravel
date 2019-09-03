@@ -53,15 +53,66 @@
                         @if ($mapas->order_map ==1)
                             <div class="tab-pane fade active show " id="pills-{{$mapas->name_unic}}" role="tabpanel"
                                  aria-labelledby="pills-{{$mapas->name_unic}}-tab">
+                                <div class="mapstatus">
+                                    <div class="topmap">
+                                        <p>Quests do Mapa: {{$mapas->nome}}</p>
+                                    </div>
+                                    <div class="corpo-quest">
+                                       @foreach($quests as $quest)
+                                           @if($quest->id_mapa == $mapas->id)
 
-                                <p>Dados do Mapa: {{$mapas->nome}}</p>
+                                            <div class="quest">
+                                                <p class="titulo">{{$quest->titulo}}</p>
+                                                <p class="descricao">{{$quest->descricao}}</p>
+                                                <div class="recompensa">
+
+                                                    <img class="img-responsive info-popover popover-rec-quest imgxp"
+                                                         src="{{asset('img/icon_xp.png')}}"
+                                                         data-toggle="popover" data-html="true"
+                                                         data-placement="right"
+                                                         data-title="Ganho de Exp"
+                                                         data-content="+ {{$quest->exp}}"
+                                                         data-trigger="click"
+                                                    >
+
+                                                    <img class="img-responsive info-popover popover-rec-quest imgcol"
+                                                         src="{{asset('img/icon_cols.png')}}"
+                                                         data-toggle="popover" data-html="true"
+                                                         data-placement="right"
+                                                         data-title="Ganho de Cols"
+                                                         data-content="+ {{$quest->cols}}"
+                                                         data-trigger="click"
+                                                    >
+                                                </div>
+                                            </div>
+
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         @else
                             <div class="tab-pane fade" id="pills-{{$mapas->name_unic}}" role="tabpanel"
                                  aria-labelledby="pills-{{$mapas->name_unic}}-tab">
+                                <div class="mapstatus">
+                                    <div class="topmap">
+                                        <p>Quests do Mapa: {{$mapas->nome}}</p>
+                                    </div>
+                                    <div class="corpo-quest">
+                                        @foreach($quests as $quest)
+                                            @if($quest->id_mapa == $mapas->id)
 
-                                <p>Dados do Mapa: {{$mapas->nome}}</p>
+                                                <div class="quest">
+                                                    <p class="titulo">{{$quest->titulo}}</p>
+                                                    <p class="descricao">{{$quest->descricao}}</p>
+                                                </div>
+                                                
 
+
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                         @endif
 

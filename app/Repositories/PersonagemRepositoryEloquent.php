@@ -170,10 +170,10 @@ class PersonagemRepositoryEloquent implements PersonagemRepository
             ->limit(1)
             ->get();
         foreach ($personagem as $classe) {
-            $this->id_classe = $classe->id;
+            $this->id_classe = $classe->id_classe;
 
         }
-
+        /*dd($this->id_classe);*/
         return $this->id_classe;
     }
 

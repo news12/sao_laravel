@@ -51,11 +51,19 @@ class QuestRepositoryEloquent implements QuestRepository
         return $dados;
     }
 
-    public function all($columns = ['*'])
+    public function all($columns = ['*'],$where=[null])
     {
-        $dados = DB::table($this->table)
-            ->select($columns)
-            ->get();
+        if (isset($where['id_andar'])) {
+            $dados = DB::table($this->table)
+                ->select($columns)
+                ->where('id_andar',$where['id_andar'])
+                ->get();
+        }
+        else {
+            $dados = DB::table($this->table)
+                ->select($columns)
+                ->get();
+        }
 
         return $dados;
     }

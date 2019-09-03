@@ -92,7 +92,7 @@ class SkillRepositoryEloquent implements SkillRepository
             ->orderBy('level')
             ->orderBy('nome')
             ->get();
-        /*  dd($this->skills);*/
+          /*dd( $this->id_personagem );*/
         return $this->skills->all();
     }
 

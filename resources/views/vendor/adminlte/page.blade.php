@@ -166,7 +166,7 @@
                                 <div class="img-m"><b class="personagem">{{$avatars->avatar}}</b></div>
                                 {{--  <div class="status-perso" >--}}
                                 <div class="dropdown profile-element">
-                                    <img class="status-perso" src="{{asset('img/appearance_normal.png')}}">
+                                    <a href="{{'/indexAvatar'}}" title="Mudar Avatar!!!"><img class="status-perso" src="{{asset('img/appearance_normal.png')}}"></a>
                                     {{--</div>--}}
                                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="text-muted text-xs block"> <strong id="nomeAvatar"
